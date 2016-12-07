@@ -1,0 +1,67 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+/**
+ * @Time: Nov 6, 2016
+ * @Author: zen partitioning used in quicksort
+ */
+
+public class lintCode1 {
+    public int partitionArray(int[] nums, int k) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left <= right) {
+            if (nums[left] >= k) {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                right--;
+            } else {
+                left++;
+            }
+
+        }
+        return left;
+
+    }
+    
+    
+    public void sortNutsAndBolts(String[] nuts, String[] bolts) {
+        if(nuts.length <=1){
+            return;
+        }
+        ArrayList<String> nutslist = new ArrayList<>(Arrays.asList(nuts));
+        ArrayList<String> boltslist = new ArrayList<>(Arrays.asList(bolts));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    public void quickSortList(ArrayList<String> nuts, ArrayList<String> bolts){
+        
+        
+        
+    }
+    
+    public int partition(String[] bolts, String nut, int start, int end){
+        return end;
+        
+        
+        
+        
+        
+        
+    }
+}

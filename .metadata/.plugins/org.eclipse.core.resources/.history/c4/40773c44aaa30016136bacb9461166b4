@@ -1,0 +1,37 @@
+import java.util.LinkedList;
+
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+
+   
+    public static void main(String[] args) {
+
+        LeetCodeSolu5 solu5 = new LeetCodeSolu5();
+        char[][] input = { { '1', '1', '1' }, { '0', '1', '0' }, { '1', '1', '1' } };
+        System.out.println(solu5.numIslands(input));
+
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        
+        
+ 
+
+       
+        passrecrusion(list);
+
+      
+    }
+
+}

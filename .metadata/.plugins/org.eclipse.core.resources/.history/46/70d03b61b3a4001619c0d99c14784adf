@@ -1,0 +1,20 @@
+
+/**
+ * @Time: Nov 7, 2016
+ * @Author: zen
+ */
+
+public class twitterChallenge {
+    int krakenCount(int m, int n) {
+        int[][] matrix = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            matrix[i][0] = 1;
+        }
+        
+        
+        
+        
+
+        return matrix[m - 1][n - 1];
+    }
+}

@@ -1,0 +1,44 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+/**
+ * @Time: Nov 5, 2016
+ * @Author: zen
+ */
+
+public class kthElement {
+    public int find(int [] array, int k) {
+        //Find the smallest element in a stream of arrays
+        
+        PriorityQueue<Integer> pq = new PriorityQueue<>(k
+                
+                
+                Comparator<Integer>{
+            
+            
+            
+        }
+                
+                
+                );
+        for (int i = 0; i < array.length; i++) {
+            int element = array[i];
+            if (pq.isEmpty()) {
+              pq.add(element);  
+            } else{
+                if (element < pq.peek()) {
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+        
+        
+        
+        return 0;
+    }
+
+}

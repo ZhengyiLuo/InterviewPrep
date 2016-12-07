@@ -1,0 +1,16 @@
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+    public static void main(String[] args) {
+        int[][] array = { };
+        LeetCodeSolu7 solu = new LeetCodeSolu7();
+       solu.reconstructQueue(array)
+       
+
+      
+    }
+
+}

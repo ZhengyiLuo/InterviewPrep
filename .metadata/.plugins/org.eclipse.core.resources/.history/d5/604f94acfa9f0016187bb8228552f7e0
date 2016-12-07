@@ -1,0 +1,51 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+
+    public static void passrecrusion(LinkedList<Integer> list) {
+        if (list.isEmpty()) {
+            return;
+        }
+        
+        list.removeLast();
+        passrecrusion(list);
+        System.out.println("gggggggggggggggggggg");
+        for (Iterator iterator = list.iterator(); iterator.hasNext();) {
+            Integer integer = (Integer) iterator.next();
+            System.out.println(integer);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        LeetCodeSolu5 solu5 = new LeetCodeSolu5();
+        char[][] input = { { '1', '1', '1' }, { '0', '1', '0' }, { '1', '1', '1' } };
+        System.out.println(solu5.numIslands(input));
+
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        list.add(4);
+        
+        String tString = "APPLe"
+ 
+
+       
+        passrecrusion(list);
+
+      
+    }
+
+}

@@ -1,0 +1,51 @@
+
+/**
+ * @Time: Oct 19, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class LeetCodeSolu5 {
+    public RandomListNode copyRandomList(RandomListNode head) {
+        HashMap<RandomListNode, RandomListNode> map = new HashMap<>();
+        RandomListNode newhead = new RandomListNode(head.label);
+        map.put(head, newhead);
+        
+        while(head.next != null){
+            RandomListNode newNode = map.get(head);
+             if(!map.contains(head.next)){
+                newnode.next = new RandomListNode(head.next.label);
+                map.put(head.next, newnode.next)
+            } else{
+                newNode.next = map.get(head.next);
+            }
+            
+            if(!map.contains(head.random)){
+                newnode.random = new RandomListNode(head.random.label);
+                map.put(head.random, newnode.random)
+            } else{
+                newNode.random = map.get(head.random);
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            head = head.next;
+        }
+        
+        
+        
+   }
+
+    class RandomListNode {
+        int label;
+        RandomListNode next, random;
+
+        RandomListNode(int x) {
+            this.label = x;
+        }
+    };
+}

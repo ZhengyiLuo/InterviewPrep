@@ -1,0 +1,18 @@
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+    public static void main(String[] args) {
+        int a = 56;
+        int b = 34;
+        a = a^b;
+        b = a^b;
+        a = a^b;
+        System.out.println(a);
+        System.out.println(b);
+
+    }
+
+}

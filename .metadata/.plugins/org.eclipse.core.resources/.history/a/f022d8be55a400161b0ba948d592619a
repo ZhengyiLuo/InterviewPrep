@@ -1,0 +1,15 @@
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+    public static void main(String[] args) {
+     int[] array = {1,2,3,4,5,6};
+     lintCode1 solu = new lintCode1();
+     System.out.println(solu.partitionArray(array, 4));
+     
+
+    }
+
+}

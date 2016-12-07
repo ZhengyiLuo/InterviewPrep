@@ -1,0 +1,30 @@
+
+/**
+ * @Time: Nov 6, 2016
+ * @Author: zen
+ */
+
+public class lintCode1 {
+    public int partitionArray(int[] nums, int k) {
+        int left = 0;
+        int right = nums.length;
+
+        while (left < right) {
+            if (nums[left] >= k) {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                right--;
+            }
+            left++;
+        }
+
+        if (nums[right] < k) {
+            return right + 1;
+
+        } else {
+            return right;
+        }
+
+    }
+}

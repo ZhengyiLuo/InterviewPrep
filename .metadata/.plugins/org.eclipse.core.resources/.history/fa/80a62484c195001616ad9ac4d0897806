@@ -1,0 +1,92 @@
+import java.util.HashMap;
+
+/**
+ * @Time: Oct 19, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class LeetCodeSolu5 {
+    public RandomListNode copyRandomList1(RandomListNode head) {
+        HashMap<RandomListNode, RandomListNode> map = new HashMap<>();
+        if (head == null) {
+            return null;
+        }
+
+        RandomListNode newhead = new RandomListNode(head.label);
+        map.put(head, newhead);
+
+        while (head != null) {
+            RandomListNode newNode = map.get(head);
+            if (!map.containsKey(head.next)) {
+                if (head.next != null) {
+                    newNode.next = new RandomListNode(head.next.label);
+                    map.put(head.next, newNode.next);
+                } else {
+                    newNode.next = null;
+                }
+            } else {
+                newNode.next = map.get(head.next);
+            }
+
+            if (!map.containsKey(head.random)) {
+                if (head.random != null) {
+                    newNode.random = new RandomListNode(head.random.label);
+                    map.put(head.random, newNode.random);
+                } else {
+                    newNode.random = null;
+                }
+
+            } else {
+                newNode.random = map.get(head.random);
+            }
+            head = head.next;
+        }
+        return newhead;
+
+    }
+
+    public RandomListNode copyRandomList(RandomListNode head) {
+        if (head == null) {
+            return null;
+        }
+        RandomListNode newhead = head;
+        while (head != null) {
+            RandomListNode temp = head.next;
+            head.next = new RandomListNode(head.label);
+            head.next = temp;
+            head = head.next;
+        }
+
+        head = newhead;
+        newhead = newhead.next;
+        RandomListNode temp = head;
+        while (temp.next.next != null) {
+
+            if (temp.random != null) {
+                temp.next.random = temp.random.next;
+            } else {
+                temp.next.random = null;
+            }
+
+            RandomListNode temp2 = temp.next.next;
+            if (temp.next.next != null) {
+                temp.next.next = temp.next.next.next;
+            } 
+
+            temp = temp2;
+
+        }
+
+        return head;
+
+    }
+
+    class RandomListNode {
+        int label;
+        RandomListNode next, random;
+
+        RandomListNode(int x) {
+            this.label = x;
+        }
+    };
+}

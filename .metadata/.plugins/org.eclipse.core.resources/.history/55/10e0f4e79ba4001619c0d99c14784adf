@@ -1,0 +1,14 @@
+/**
+ * @Time: Sep 18, 2016
+ * @Author: ZhengyiLuo
+ */
+
+public class main {
+    public static void main(String[] args) {
+        int[] array = { 10, 9, 2, 5, 3, 4 };
+        LeetCodeSolu9 solu9 = new LeetCodeSolu9();
+        System.out.println(solu9.lengthOfLIS(array));
+
+    }
+
+}
